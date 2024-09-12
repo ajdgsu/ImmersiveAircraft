@@ -22,7 +22,7 @@ public abstract class AirplaneEntity extends AircraftEntity {
     protected float getGravity() {
         Vector3f direction = getForwardDirection();
         float speed = (float) getDeltaMovement().length() * (1.0f - Math.abs(direction.y));
-        return Math.max(0.0f, 1.0f - speed * 1.5f) * super.getGravity();
+        return Math.max(0.0f, 2.0f - speed * 2.0f) * super.getGravity();
     }
 
     protected float getBrakeFactor() {
@@ -49,9 +49,9 @@ public abstract class AirplaneEntity extends AircraftEntity {
         Vector3f direction = getForwardDirection();
 
         // speed
-        float thrust = (float) (Math.pow(getEnginePower(), 10.0) * getProperties().get(VehicleStat.ENGINE_SPEED));
+        float thrust = (float) (Math.pow(getEnginePower(), 5.0) * getProperties().get(VehicleStat.ENGINE_SPEED));
         if (onGround() && getEngineTarget() < 0.9) {
-            thrust = getProperties().get(VehicleStat.PUSH_SPEED) / (1.0f + (float) getDeltaMovement().length() * 15.0f) * pressingInterpolatedZ.getSmooth() * (1.0f - getEnginePower());
+            thrust = getProperties().get(VehicleStat.PUSH_SPEED) / (1.0f + (float) getDeltaMovement().length() * 3.0f) * pressingInterpolatedZ.getSmooth() * (1.0f - getEnginePower());
         }
 
         // accelerate
