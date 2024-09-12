@@ -7,10 +7,10 @@
     "pushSpeed": 0.007,
     "glideFactor": 0.05,
     "driftDrag": 0.008,
-    "lift": 0.165,
+    "lift": 0.17,
     "rollFactor": 65.0,
     "groundPitch": 1.0,
-    "wind": 0.25,
+    "wind": 0.15,
     "mass": 2.5
   },
   "inventorySlots": [
