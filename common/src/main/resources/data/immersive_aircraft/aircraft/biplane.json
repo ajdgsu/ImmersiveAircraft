@@ -1,17 +1,17 @@
 {
   "properties": {
-    "fuel": 1.25,
+    "fuel": 1.3,
     "yawSpeed": 5.0,
-    "pitchSpeed": 4.0,
-    "engineSpeed": 0.03,
-    "pushSpeed": 0.025,
+    "pitchSpeed": 3.0,
+    "engineSpeed": 0.027,
+    "pushSpeed": 0.007,
     "glideFactor": 0.05,
-    "driftDrag": 0.01,
-    "lift": 0.15,
-    "rollFactor": 45.0,
-    "groundPitch": 4.0,
+    "driftDrag": 0.008,
+    "lift": 0.165,
+    "rollFactor": 65.0,
+    "groundPitch": 1.0,
     "wind": 0.025,
-    "mass": 1.0
+    "mass": 2.5
   },
   "inventorySlots": [
     {"type": "booster", "x": 17, "y": 66},
