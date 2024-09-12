@@ -21,8 +21,8 @@ public abstract class AirplaneEntity extends AircraftEntity {
     @Override
     protected float getGravity() {
         Vector3f direction = getForwardDirection();
-        float speed = (float) getDeltaMovement().length() * (0.5f - Math.abs(direction.y));
-        return Math.max(0.0f, 1.0f - speed * 1.5f) * super.getGravity();
+        float speed = (float) getDeltaMovement().length() * (0.7f - Math.abs(direction.y));
+        return Math.max(0.0f, 2.0f - speed * 3f) * super.getGravity();
     }
 
     protected float getBrakeFactor() {
