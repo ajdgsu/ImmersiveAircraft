@@ -26,7 +26,7 @@ public abstract class AirplaneEntity extends AircraftEntity {
     }
 
     protected float getBrakeFactor() {
-        return 0.55f;
+        return 0.99f;
     }
 
     @Override
@@ -39,7 +39,7 @@ public abstract class AirplaneEntity extends AircraftEntity {
 
         // engine control
         if (movementY != 0) {
-            setEngineTarget(Math.max(0.0f, Math.min(1.0f, getEngineTarget() + 0.03f * movementY)));
+            setEngineTarget(Math.max(0.0f, Math.min(1.0f, getEngineTarget() + 0.02f * movementY)));
             if (movementY < 0) {
                 setDeltaMovement(getDeltaMovement().scale(getBrakeFactor()));
             }
@@ -51,7 +51,7 @@ public abstract class AirplaneEntity extends AircraftEntity {
         // speed
         float thrust = (float) (Math.pow(getEnginePower(), 2.0) * getProperties().get(VehicleStat.ENGINE_SPEED));
         if (onGround() && getEngineTarget() < 1.0) {
-            thrust = getProperties().get(VehicleStat.PUSH_SPEED) / (1.0f + (float) getDeltaMovement().length() * 5.0f) * pressingInterpolatedZ.getSmooth() * (1.0f - getEnginePower());
+            thrust = getProperties().get(VehicleStat.PUSH_SPEED) / (0.5f + (float) getDeltaMovement().length() * 5.0f) * pressingInterpolatedZ.getSmooth() * (1.0f - getEnginePower());
         }
 
         // accelerate
