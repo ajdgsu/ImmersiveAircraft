@@ -7,7 +7,7 @@
     "pushSpeed": 0.007,
     "glideFactor": 0.05,
     "driftDrag": 0.008,
-    "lift": 0.25,
+    "lift": 0.5,
     "rollFactor": 65.0,
     "groundPitch": 1.0,
     "wind": 0.025,
