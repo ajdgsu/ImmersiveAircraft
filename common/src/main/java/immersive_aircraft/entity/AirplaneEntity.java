@@ -49,7 +49,7 @@ public abstract class AirplaneEntity extends AircraftEntity {
         Vector3f direction = getForwardDirection();
 
         // speed
-        float thrust = (float) (Math.pow(getEnginePower(), 100.0) * getProperties().get(VehicleStat.ENGINE_SPEED));
+        float thrust = (float) (Math.pow(getEnginePower(), 100000.0) * getProperties().get(VehicleStat.ENGINE_SPEED));
         if (onGround() && getEngineTarget() < 0.05) {
             thrust = getProperties().get(VehicleStat.PUSH_SPEED) / (1.0f + (float) getDeltaMovement().length() * 150.0f) * pressingInterpolatedZ.getSmooth() * (1.0f - getEnginePower());
         }
