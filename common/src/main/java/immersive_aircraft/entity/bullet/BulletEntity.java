@@ -10,7 +10,7 @@ import net.minecraft.world.phys.HitResult;
 
 public class BulletEntity extends AbstractHurtingProjectile {
     private float scale = 0.25f;
-    private float damage = 15.0f;
+    private float damage = 19.5f;
 
     public BulletEntity(EntityType<? extends BulletEntity> entityType, Level level) {
         super(entityType, level);
