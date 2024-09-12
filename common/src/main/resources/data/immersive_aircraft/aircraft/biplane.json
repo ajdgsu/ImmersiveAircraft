@@ -9,7 +9,7 @@
     "driftDrag": 0.008,
     "lift": 0.17,
     "rollFactor": 65.0,
-    "groundPitch": 1.0,
+    "groundPitch": 2.0,
     "wind": 0.15,
     "mass": 2.5
   },
