@@ -10,7 +10,7 @@
     "lift": 0.5,
     "rollFactor": 65.0,
     "groundPitch": 1.0,
-    "wind": 0.025,
+    "wind": 0.0165,
     "mass": 2.5
   },
   "inventorySlots": [
